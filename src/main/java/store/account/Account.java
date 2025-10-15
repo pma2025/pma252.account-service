@@ -4,7 +4,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-@Builder @Data @Accessors(fluent = true, chain = true)
+@Builder
+@Data
+@Accessors(fluent = true, chain = true)
 public class Account {
 
     private String id;
@@ -12,5 +14,5 @@ public class Account {
     private String email;
     private String password;
     private String sha256;
-    
+
 }

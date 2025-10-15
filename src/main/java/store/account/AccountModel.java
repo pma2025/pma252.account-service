@@ -13,8 +13,10 @@ import lombok.experimental.Accessors;
 
 @Entity
 @Table(name = "account")
-@Setter @Accessors(chain = true, fluent = true)
-@NoArgsConstructor @AllArgsConstructor
+@Setter
+@Accessors(chain = true, fluent = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class AccountModel {
 
     @Id
@@ -40,11 +42,11 @@ public class AccountModel {
 
     public Account to() {
         return Account.builder()
-            .id(this.id)
-            .name(this.name)
-            .email(this.email)
-            .sha256(this.sha256)
-            .build();
+                .id(this.id)
+                .name(this.name)
+                .email(this.email)
+                .sha256(this.sha256)
+                .build();
     }
-    
+
 }
